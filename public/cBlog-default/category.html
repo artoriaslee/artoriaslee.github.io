@@ -1,0 +1,50 @@
+{include file="public/cBlog-default/header.html" /}
+<div class="layui-fluid">
+    <div class="layui-row layui-elem-quote">
+        <span class="layui-breadcrumb" lay-separator="—">
+            <a href="{$url.href}">{:lang('Home')}</a>
+            {notempty name="daohang"}
+            {volist name="daohang" id="vo"}
+            <a href="{$vo.href}">{$vo.label}</a>
+            {/volist}
+            {else /}
+            <a><cite>{$daohang1}</cite></a>
+            {/notempty}
+        </span>
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space20">
+        <div class="layui-col-md8 layui-clear">
+            {$category_top_group}
+            {notempty name="sousuo"}
+            <div class="cblist">
+                <h2 class="title">{$sousuo}</h2>
+            </div>
+            {/notempty}
+            {volist name="fenlei" id="vo"}
+            <div class="cblist">
+                <h2 class="title"><a href="{$vo.href}">{$vo.biaoti}</a></h2>
+                <div class="date_hits">
+                    <span><i class="layui-icon">&#xe612;</i> {$vo.nicheng}</span>
+                    <span><i class="layui-icon">&#xe60e;</i> {$vo.fabushijian}</span>
+                    <span class="hits"><i class="layui-icon">&#xe62c;</i> {$vo.yuedu} ℃</span>
+                    <span class="commonts"><i class="layui-icon">&#xe600;</i> {$vo.zan}</span>
+                </div>
+                {notempty name="vo.suolvetu"}
+                <a href="{$vo.href}"><img class="pic" src="{$vo.suolvetu}" alt="{$vo.biaoti}"></a>
+                {/notempty}
+                <a href="{$vo.href}"><div class="desc">{$vo.zhaiyao}</div></a>
+            </div>
+            {/volist}
+            <div class="pages">{$pages}</div>
+            {$category_bottom_group}
+        </div>
+        <div class="layui-col-md4 cbyoulan">
+            {$category_side_top_group}
+            {include file="public/cBlog-default/side.html" /}
+            {$category_side_bottom_group}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-default/footer.html" /}

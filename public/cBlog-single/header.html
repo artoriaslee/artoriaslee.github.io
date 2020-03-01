@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{$title_easy}{$title}{$subtitle_easy}</title>
+    <meta name="keywords" content="{$keyword}">
+    <meta name="description" content="{$description}">
+    <link rel="icon" href="{$ico_easy}">
+    <link rel="stylesheet" href="{$domain}public/common/css/bootstrap.min.css">
+    <link href="{$domain}public/common/kindeditor/plugins/code/prettify.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="{$domain}public/{$template}/css/{$template}.css">
+    <script src="{$domain}public/common/js/jquery.min.js"></script>
+    <script src="{$domain}public/common/js/bootstrap.min.js"></script>
+</head>
+<body style="background:url('{$beijingtu_easy}');">
+<div class="container-fluid hidden-xs">
+    <div class="row text-center headbg" style="background:url('{$fengmiantu_easy}') no-repeat center;color:{$fengmianzi_easy};">
+        <a href="{$url.href}"><img class="notDelay img-circle bian10" src="{$logo_easy}" width="120" height="120"></a>
+        <div class="toubiaoti">
+            <h1><b>{$title}</b></h1>
+            <h4>{$subtitle}</h4>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container col-md-8 col-md-offset-2">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="visible-xs-block">
+                <a class="navbar-brand" href="{$url.href}">
+                    <img alt="{:lang('Catfish CMS')}" src="{$logo_easy}" width="20" height="20">
+                </a>
+                <a class="navbar-brand" href="{$url.href}">{$title}</a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="daohangcaidan">
+                {$menuAide.menu1.bootstrap}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {$loginAide.bootstrap}
+            </ul>
+        </div>
+    </div>
+</nav>
+{$top}

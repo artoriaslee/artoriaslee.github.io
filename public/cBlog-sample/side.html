@@ -1,0 +1,72 @@
+{notempty name="tuijian"}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">推荐阅读</h3>
+    </div>
+    <div class="panel-body">
+        {volist name="tuijian" id="vo" offset="0" length='6'}
+        <p>
+            <a href="{$vo.href}" class="list-group-item" title="{$vo.biaoti}">
+                {$vo.biaoti}
+            </a>
+        </p>
+        {/volist}
+    </div>
+</div>
+{/notempty}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">最新文章</h3>
+    </div>
+    <div class="panel-body">
+        {volist name="zuixin" id="vo" offset="0" length='6'}
+        <p>
+            <a href="{$vo.href}" class="list-group-item" title="{$vo.biaoti}">
+                {$vo.biaoti}
+            </a>
+        </p>
+        {/volist}
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门阅读</h3>
+    </div>
+    <div class="panel-body">
+        {volist name="zuire" id="vo" offset="0" length='6'}
+        <p>
+            <a href="{$vo.href}" class="list-group-item" title="{$vo.biaoti}">
+                {$vo.biaoti}
+            </a>
+        </p>
+        {/volist}
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">随机文章</h3>
+    </div>
+    <div class="panel-body">
+        {volist name="suiji" id="vo" offset="0" length='6'}
+        <p>
+            <a href="{$vo.href}" class="list-group-item" title="{$vo.biaoti}">
+                {$vo.biaoti}
+            </a>
+        </p>
+        {/volist}
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热评文章</h3>
+    </div>
+    <div class="panel-body">
+        {volist name="reping" id="vo" offset="0" length='6'}
+        <p>
+            <a href="{$vo.href}" class="list-group-item" title="{$vo.biaoti}">
+                {$vo.biaoti}
+            </a>
+        </p>
+        {/volist}
+    </div>
+</div>

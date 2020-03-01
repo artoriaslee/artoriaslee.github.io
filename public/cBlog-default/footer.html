@@ -1,0 +1,59 @@
+{$bottom}
+<div class="layui-footer footer">
+    <div class="layui-main">
+        <p>{$copyright}{$statistics}{if condition="$openMessage eq 1"}&nbsp;&nbsp;<a href="#!" data-method="offset" data-type="auto" class="liuyan"><i class="layui-icon">&#xe63a;</i>&nbsp;{:lang('I want to leave a message')}</a>{/if}{notempty name="record"}<br>{$record}{/notempty}</p>
+    </div>
+    {$catfish}
+</div>
+<div class="layui-hide">
+    <div id="liuyanbt">{:lang('Leave a message')}</div>
+    <div id="webroot">{$domain}{$root}</div>
+    <div id="denglutext">{:lang('User login')}</div>
+    <div id="meipinglun">{:lang('You have not written any reviews yet!')}</div>
+    <div id="yipinglun">{:lang('You have commented!')}</div>
+    <div id="zanyici">{:lang('Can only praise once!')}</div>
+    <div id="yijingsc">{:lang('You have a collection!')}</div>
+</div>
+<div class="layui-hide" id="catfishliuyandiv">
+    <form class="layui-form" id="catfishliuyan" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('Message title')}</label>
+            <div class="layui-input-block">
+                <input type="text" name="biaoti"  lay-verify="" placeholder="{:lang('Message title')}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">{:lang('Message content')}</label>
+            <div class="layui-input-block">
+                <textarea name="neirong" required  lay-verify="required" class="layui-textarea" placeholder="{:lang('Leave a message')}"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('Name of the message person')}</label>
+            <div class="layui-input-block">
+                <input type="text" name="xingming"  lay-verify="" placeholder="{:lang('Name of the message person')}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('Message people email')}</label>
+            <div class="layui-input-block">
+                <input type="text" name="youxiang"  lay-verify="" placeholder="{:lang('Message people email')}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block layui-hide catfishliuyantishi" style="color: #ff5500;">
+            </div>
+        </div>
+        <div class="layui-form-item" style="text-align: center;">
+            <button class="layui-btn" lay-submit lay-filter="formliuyan">{:lang('Submit Message')}<span class="layui-hide liuyanload">&nbsp;<img src="{$domain}public/common/images/zhixing_bai.gif" width="14" height="14"></span><i class="layui-icon layui-hide liuyanok">&#xe618;</i></button>
+        </div>
+    </form>
+</div>
+</body>
+<script src="{$domain}public/{$template}/layui/layui.js"></script>
+<script type="text/javascript" src="{$domain}public/common/kindeditor/plugins/code/prettify.js"></script>
+<script>
+    prettyPrint();
+</script>
+<script src="{$domain}public/{$template}/js/{$template}.js"></script>
+</html>

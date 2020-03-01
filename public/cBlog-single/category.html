@@ -1,0 +1,58 @@
+{include file="public/cBlog-single/header.html" /}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ol class="breadcrumb">
+                <li><a href="{$url.href}">{:lang('Home')}</a></li>
+                {notempty name="daohang"}
+                {volist name="daohang" id="vo"}
+                <li><a href="{$vo.href}">{$vo.label}</a></li>
+                {/volist}
+                {else /}
+                <li id="daohang1" class="active">{$daohang1}</li>
+                {/notempty}
+            </ol>
+            {$category_top_group}
+            {notempty name="sousuo"}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {$sousuo}
+                </div>
+            </div>
+            {/notempty}
+            {volist name="fenlei" id="vo"}
+            <div class="panel panel-default">
+                <div class="panel-body" style="padding: 0px;">
+                    {notempty name="vo.datu"}
+                    <div>
+                        <a href="{$vo.href}" title="{$vo.biaoti}">
+                            <img src="{$vo.datu}" class="img-responsive center-block" alt="Responsive image">
+                        </a>
+                    </div>
+                    {/notempty}
+                    <div class="biaoti">
+                        <h4 class="text-center"><a href="{$vo.href}" title="{$vo.biaoti}" target="_blank">{$vo.biaoti}</a></h4>
+                    </div>
+                    <div class="pd_level20">
+                        <h4 class="zhaiyao">{$vo.zhaiyao}</h4>
+                        <p class="text-center">【<a href="{$vo.href}" title="{$vo.biaoti}" target="_blank">{:lang('Read more')}</a>】</p>
+                    </div>
+                    <div class="zhujiao">
+                        <div class="pull-left">
+                            <h5 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;{$vo.nicheng}&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span>&nbsp;{$vo.fabushijian}</h5>
+                        </div>
+                        <div class="pull-right">
+                            <h5 class="text-muted"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;{$vo.yuedu}&nbsp;&nbsp;<span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;{$vo.zan}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/volist}
+            <div class="text-center">
+                {$pages}
+            </div>
+            {$category_bottom_group}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-single/footer.html" /}

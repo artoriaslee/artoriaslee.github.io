@@ -1,0 +1,30 @@
+{include file="public/cBlog-default/header.html" /}
+<div class="layui-fluid">
+    <div class="layui-row layui-elem-quote">
+        <span class="layui-breadcrumb" lay-separator="—">
+            <a href="{$url.href}">{:lang('Home')}</a>
+            <a><cite>{$page.biaoti|subtext=28}</cite></a>
+        </span>
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space20">
+        <div class="layui-col-md8 layui-clear">
+            {$page_top}
+            <div class="detail_container trans_3">
+                <h1>{$page.biaoti}</h1>
+                <div class="date_hits">
+                </div>
+                {$page_mid}
+                <div style="padding: 20px;">{$page.zhengwen}</div>
+                {$page_bottom}
+            </div>
+        </div>
+        <div class="layui-col-md4 cbyoulan">
+            {$page_side_top_group}
+            {include file="public/cBlog-default/side.html" /}
+            {$page_side_bottom_group}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-default/footer.html" /}

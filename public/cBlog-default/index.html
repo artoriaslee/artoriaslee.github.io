@@ -1,0 +1,91 @@
+{include file="public/cBlog-default/header.html" /}
+{$home_top}
+<div class="layui-row">
+    <div class="layui-col-xs12 layui-col-md12">
+        <div class="headbg" style="background:url('{$fengmiantu_easy}') no-repeat center;color:{$fengmianzi_easy};">
+            <div class="headtitle">{$title}</div>
+            <div class="headsubtitle">{$subtitle}</div>
+        </div>
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space30">
+        {if condition="$tuijianshu egt 3"}
+        {volist name="tuijian" id="vo" offset="0" length='3'}
+        <div class="layui-col-sm4">
+            <a href="{$vo.href}" title="{$vo.biaoti}">
+                <div class="zhanshi">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>{$vo.biaoti|subtext=13}</legend>
+                        <p>{$vo.zhaiyao|subtext=118}</p>
+                    </fieldset>
+                </div>
+            </a>
+        </div>
+        {/volist}
+        {else /}
+        {volist name="zuixin" id="vo" offset="0" length='3'}
+        <div class="layui-col-sm4">
+            <a href="{$vo.href}" title="{$vo.biaoti}">
+                <div class="zhanshi">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>{$vo.biaoti|subtext=13}</legend>
+                        <p>{$vo.zhaiyao|subtext=118}</p>
+                    </fieldset>
+                </div>
+            </a>
+        </div>
+        {/volist}
+        {/if}
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space20">
+        <div class="layui-col-md8 layui-clear">
+            {volist name="catfishBlog.neirong" id="vo"}
+            <div class="cblist">
+                <h2 class="title"><a href="{$vo.href}">{$vo.biaoti}</a></h2>
+                <div class="date_hits">
+                    <span><i class="layui-icon">&#xe612;</i> {$vo.nicheng}</span>
+                    <span><i class="layui-icon">&#xe60e;</i> {$vo.fabushijian}</span>
+                    <span class="hits"><i class="layui-icon">&#xe62c;</i> {$vo.yuedu} ℃</span>
+                    <span class="commonts"><i class="layui-icon">&#xe600;</i> {$vo.zan}</span>
+                </div>
+                {notempty name="vo.suolvetu"}
+                <a href="{$vo.href}"><img class="pic" src="{$vo.suolvetu}" alt="{$vo.biaoti}"></a>
+                {/notempty}
+                <a href="{$vo.href}"><div class="desc">{$vo.zhaiyao}</div></a>
+            </div>
+            {/volist}
+            <div class="pages">{$catfishBlog.pages}</div>
+            {$home_bottom}
+        </div>
+        <div class="layui-col-md4 cbyoulan">
+            {$home_side_top_group}
+            {notempty name="bozhu"}
+            <div>
+                <h3>{:lang('About blog owner')}</h3>
+                <div class="links trans_3 bozhu">
+                    <div class="touxiang">
+                        <img class="layui-btn-radius" src="{$bozhu.touxiang}">
+                    </div>
+                    <p>{:lang('Name')}：{$bozhu.nicheng}</p>
+                    <p>{:lang('Personal website')}：<br><a href="{$bozhu.href}" target="_blank">{$bozhu.href}</a></p>
+                    <p>{:lang('Signature')}：{$bozhu.qianming}</p>
+                </div>
+            </div>
+            {/notempty}
+            {include file="public/cBlog-default/side.html" /}
+            {$home_side_bottom_group}
+            {notempty name="links"}
+            <h3>{:lang('Friendship link')}</h3>
+            <div class="links trans_3">
+                {volist name="links" id="vo"}
+                <a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
+                {/volist}
+            </div>
+            {/notempty}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-default/footer.html" /}

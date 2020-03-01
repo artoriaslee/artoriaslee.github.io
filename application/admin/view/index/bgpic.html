@@ -1,0 +1,47 @@
+{include file="index/header" /}
+<link href="{$domain}public/common/uploadify/uploadify.css" type="text/css" rel="stylesheet">
+<link href="{$domain}public/common/colorpicker/css/bootstrap-colorpicker.min.css" type="text/css" rel="stylesheet">
+<div class="row bg-info text-center">
+    <h4>{:lang('Background picture')}</h4>
+</div><br>
+<div class="container-fluid" style="min-height: 800px;">
+    <div class="row">
+        <form method="post" action="">
+            <div class="form-group">
+                <label>{:lang('Cover picture')}：</label>
+                <img src="{$domain}public/common/images/default-thumbnail.png" class="img-thumbnail img-responsive" id="coverImg" style="max-width: 800px;">
+                <input type="hidden" value="{$fengmiantu}" name="coverpic" id="coverpic">
+                <div class="row">
+                    <div class="col-md-3"><div id="upload"></div></div>
+                    <div class="col-md-9"><button id="coverdel" type="button" class="btn btn-default btn-sm hidden" style="margin-top: 10px;">{:lang('Delete the picture')}</button></div>
+                </div>
+                <p class="help-block">{:lang('Cover picture is displayed at the top of the page large picture, the need for subject support, if the theme does not support will not show, it is recommended to upload picture ratio: width × height = 1920 × 600')}</p>
+            </div>
+            <div class="form-group">
+                <label>{:lang('Cover word color')}：</label>
+                <input type="text" value="{$fengmianzi}" class="form-control" name="fengmianzi" id="fengmianzi" placeholder="{:lang('Such as')}：#FFFFFF">
+                <p class="help-block">{:lang('Set the color of the cover text, the cover text is the text above the cover picture, the need for subject support')}</p>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>{:lang('Background picture')}：</label>
+                <img src="{$domain}public/common/images/default-thumbnail.png" class="img-thumbnail img-responsive" id="backgroundImg" style="max-width: 800px;">
+                <input type="hidden" value="{$beijingtu}" name="backgroundpic" id="backgroundPic">
+                <div class="row">
+                    <div class="col-md-3"><div id="bgPicUpload"></div></div>
+                    <div class="col-md-9"><button id="backgrounddel" type="button" class="btn btn-default btn-sm hidden" style="margin-top: 10px;">{:lang('Delete the picture')}</button></div>
+                </div>
+                <p class="help-block">{:lang('The background image is the background of the foreground page, requires subject support, and will not be displayed if the theme is not supported')}</p>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-default" id="baocun">{:lang('Save')}<span class="hidden">&nbsp;<img src="{$domain}public/common/images/zhixing.gif" width="16" height="16"></span></button>
+            </div>
+        </form>
+    </div>
+</div><br><br>
+<div class="hidden" id="webroot">{$domain}</div>
+<div class="hidden" id="buttonText">{:lang('Select Image')}</div>
+<script type="text/javascript" src="{$domain}public/common/uploadify/jquery.uploadify.js"></script>
+<script type="text/javascript" src="{$domain}public/common/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="{$domain}public/common/js/bgPic.js"></script>
+{include file="index/footer" /}

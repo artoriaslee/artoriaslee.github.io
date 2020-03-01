@@ -1,0 +1,53 @@
+<?php
+/**
+ * Project: Catfish.
+ * Author: A.J
+ * Date: 2016/11/27
+ */
+return [
+    'Catfish CMS' => 'сома кмв',
+    'Keyword' => 'ключевыми',
+    'Search' => 'поиск',
+    'Sign up' => 'регистрация',
+    'Log in' => 'Логин',
+    'User center' => 'Пользователи  центра',
+    'Sign out' => 'выход',
+    'Previous picture' => 'назад',
+    'Next picture' => 'следующий',
+    'I want to leave a message' => 'я Ван т оставить сообщение',
+    'Leave a message' => 'оставить сообщение',
+    'Message title' => 'заголовок сообщения',
+    'Message content' => 'содержание сообщения',
+    'Name of the message person' => 'имя лица сообщения',
+    'Message people email' => 'сообщение электронной почты людей',
+    'Submit Message' => 'отправить сообщение',
+    'Close' => 'близко',
+    'Home' => 'дома',
+    'Recommended reading' => 'Рекомендовано к ознакомлению',
+    'The content you are viewing has moved!' => 'содержание имеет ах рецензирование переехал!',
+    'Article' => 'статья',
+    'Source' => 'источник',
+    'Release time' => 'время отключения',
+    'Author' => 'автор',
+    'Reading volume' => 'Чтение объема',
+    'I want to comment' => 'я Ван т на комментарий',
+    'Give it a like' => 'Хвала',
+    'I want to collect' => 'я Ван т собрать',
+    'Previous' => 'предыдущий',
+    'Next' => 'следующий',
+    'Sign in to post a comment' => 'войти в систему, чтобы  опубликовать  комментарий',
+    'Submit a comment' => 'оставить свой комментарий',
+    'User comments' => 'Комментарии пользователей',
+    'Comment time' => 'комментарий время',
+    'User login' => 'Логин пользователя',
+    'User name' => 'имя пользователя',
+    'Password' => 'пароль',
+    'Cancel' => 'отменить',
+    'Multi-language support' => 'Поддержка нескольких языков',
+    'You have not written any reviews yet!' => 'Вы не написали ни одного отзыва!',
+    'You have commented!' => 'Вы прокомментировали!',
+    'Can only praise once!' => 'Можно только похвалить один раз!',
+    'You have a collection!' => 'У вас есть коллекция!',
+    'The latest release' => 'Последний релиз',
+    'Read more' => 'Прочитайте больше'
+];

@@ -1,0 +1,53 @@
+<?php
+/**
+ * Project: Catfish.
+ * Author: A.J
+ * Date: 2016/12/1
+ */
+return [
+    'Catfish CMS' => 'Catfish CMS',
+    'Keyword' => 'Mot-clé',
+    'Search' => 'Chercher',
+    'Sign up' => 'S\'inscrire',
+    'Log in' => 'S\'identifier',
+    'User center' => 'Centre utilisateur',
+    'Sign out' => 'Se déconnecter',
+    'Previous picture' => 'précédent',
+    'Next picture' => 'Prochain',
+    'I want to leave a message' => 'Je veux laisser un message',
+    'Leave a message' => 'Laisser un message',
+    'Message title' => 'Titre du message',
+    'Message content' => 'Contenu du message',
+    'Name of the message person' => 'Nom de la personne du message',
+    'Message people email' => 'Message email des personnes',
+    'Submit Message' => 'Soumettre un message',
+    'Close' => 'Fermer',
+    'Home' => 'Page d\'accueil',
+    'Recommended reading' => 'De recommander la lecture',
+    'The content you are viewing has moved!' => 'Vous voulez voir le contenu a été supprimé!',
+    'Article' => 'Article',
+    'Source' => 'La source',
+    'Release time' => 'Temps de libération',
+    'Author' => 'Auteur',
+    'Reading volume' => 'Le volume de lecture',
+    'I want to comment' => 'Je voudrais commenter',
+    'Give it a like' => 'Cliquez félicité',
+    'I want to collect' => 'Je veux collecter',
+    'Previous' => 'Précédent',
+    'Next' => 'Prochain',
+    'Sign in to post a comment' => 'Après la connexion peut publier des commentaires',
+    'Submit a comment' => 'Soumettre un commentaire',
+    'User comments' => 'Commentaires des utilisateurs',
+    'Comment time' => 'Heure de commentaire',
+    'User login' => 'L\'ouverture de session de l\'utilisateur',
+    'User name' => 'Nom d\'utilisateur',
+    'Password' => 'Mot de passe',
+    'Cancel' => 'Annuler',
+    'Multi-language support' => 'Prise en charge multilingue',
+    'You have not written any reviews yet!' => 'Vous n\'avez encore écrit aucun avis!',
+    'You have commented!' => 'Vous avez commenté!',
+    'Can only praise once!' => 'Ne peut louer qu\'une seule fois!',
+    'You have a collection!' => 'Vous avez une collection!',
+    'The latest release' => 'La dernière version',
+    'Read more' => 'Lire la suite'
+];

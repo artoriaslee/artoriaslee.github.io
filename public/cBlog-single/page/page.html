@@ -1,0 +1,35 @@
+{include file="public/cBlog-single/header.html" /}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <ol class="breadcrumb">
+                <li><a href="{$url.href}">{:lang('Home')}</a></li>
+                <li class="active">{$page.biaoti|subtext=28}</li>
+            </ol>
+            {$page_top}
+            <div class="page-header">
+                <h1>{$page.biaoti}</h1>
+            </div>
+            <div>
+                {$page_mid}
+                {$page.zhengwen}
+                {$page_bottom}
+            </div>
+        </div>
+        <div class="col-md-3">
+            {$page_side_top_group}
+            {notempty name="tuijian"}
+            <div class="new_list">
+                <h3>{:lang('Recommended reading')}</h3>
+                <ol class="page_right_list trans_3">
+                    {volist name="tuijian" id="vo" offset="0" length='10'}
+                    <li><a href="{$vo.href}">{$vo.biaoti}</a><span class="hits"> {$vo.yuedu} ℃ </span></li>
+                    {/volist}
+                </ol>
+            </div>
+            {/notempty}
+            {$page_side_bottom_group}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-single/footer.html" /}

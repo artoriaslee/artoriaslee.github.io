@@ -1,0 +1,97 @@
+{include file="public/cBlog-default/header.html" /}
+<div class="layui-fluid">
+    <div class="layui-row layui-elem-quote">
+        <span class="layui-breadcrumb" lay-separator="—">
+            <a href="{$url.href}">{:lang('Home')}</a>
+            {notempty name="daohang"}
+                {volist name="daohang" id="vo"}
+                <a href="{$vo.href}">{$vo.label}</a>
+                {/volist}
+            {else /}
+            <a href="{$url.articles}">{:lang('Article')}</a>
+            {/notempty}
+            <a><cite>{$neirong.biaoti|subtext=28}</cite></a>
+        </span>
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space20">
+        <div class="layui-col-md8 layui-clear">
+            {$article_top}
+            <div class="detail_container trans_3">
+                {empty name="neirong"}
+                <div class="cucuo"><i class="layui-icon">&#xe609;</i>&nbsp;{:lang('The content you are viewing has moved!')}</div>
+                {else /}
+                <h1>{$neirong.biaoti}</h1>
+                <div class="date_hits">
+                <span>
+                    {notempty name="neirong.laiyuan"}{:lang('Source')}：{$neirong.laiyuan}&nbsp;{/notempty}{:lang('Release time')}：{$neirong.fabushijian}&nbsp;{:lang('Author')}：{$neirong.nicheng}&nbsp;{:lang('Reading volume')}：{$neirong.yuedu}
+                </span>
+                    {if condition="$yunxupinglun eq 1"}
+                    <a href="#zpinglun" class="pull-right" title="{:lang('I want to comment')}"><i class="layui-icon" style="color: #009688;">&#xe611;</i></a>
+                    {/if}
+                </div>
+                {$article_mid}
+                {notempty name="neirong"}
+                <div class="content">
+                    {$neirong.zhengwen}
+                </div>
+                {/notempty}
+                {$article_bottom}
+                <div class="juzho"><a name="zpinglun"></a>
+                    <input type="hidden" value="{$neirong.id}">
+                    <button id="zan" class="layui-btn"><i class="layui-icon">&#xe600;</i> {:lang('Give it a like')} <a id="zanshu" class="layui-btn layui-btn-mini layui-btn-radius layui-btn-primary">{$neirong.zan}</a></button>
+                    <span id="woyaoshoucang"{empty name="login"} class="layui-hide"{/empty}>
+                    &nbsp;&nbsp;
+                    <button id="shoucang" class="layui-btn"><i class="layui-icon">&#xe608;</i> {:lang('I want to collect')} <i class="layui-icon layui-hide" id="yishoucang">&#xe618;</i></button>
+                    </span>
+                </div>
+                <div class="prev_next">
+                    <div class="prev">{:lang('Previous')}：<a href="{$previous.href}">{$previous.biaoti}</a></div>
+                    <div class="next">{:lang('Next')}：<a href="{$next.href}">{$next.biaoti}</a></div>
+                </div>
+                {$comment_top}
+                {if condition="$closeComment neq 1"}
+                {if condition="$yunxupinglun eq 1"}
+                <div class="pinglun">
+                    <form class="layui-form" action="">
+                        <div style="margin: 10px 0;">{:lang('I want to comment')}</div>
+                        <textarea id="pinglunk" style="display: none;"></textarea>
+                        <div class="juzho">
+                            <input type="hidden" value="{$neirong.id}">
+                            <button id="pinglun" data-type="content" class="layui-btn" lay-submit lay-filter="tijiaopl">{:lang('Submit a comment')}<span class="layui-hide">&nbsp;<img src="{$domain}public/common/images/zhixing_bai.gif" width="14" height="14"></span> <span class="layui-hide"><i class="layui-icon">&#xe618;</i></span></button>
+                        </div>
+                    </form>
+                </div>
+                {/if}
+                {$comment_mid}
+                {notempty name="pinglun"}
+                <div class="pinglun">
+                    <h4>{:lang('User comments')}</h4>
+                    {volist name="pinglun" id="vo"}
+                    <hr>
+                    <div class="pingyu layui-clear">
+                        <img class="layui-btn-radius" src="{empty name="vo.touxiang"}{$defaultAvatar}{else /}{$vo.touxiang}{/empty}">
+                        <div class="pingyux">
+                            <p class="plname">{$vo.nicheng}</p>
+                            <p class="plshi">{:lang('Comment time')}：{$vo.shijian}</p>
+                            <p>{$vo.neirong}</p>
+                        </div>
+                    </div>
+                    {/volist}
+                    <div class="pages">{$pages}</div>
+                </div>
+                {/notempty}
+                {/if}
+                {$comment_bottom}
+                {/empty}
+            </div>
+        </div>
+        <div class="layui-col-md4 cbyoulan">
+            {$article_side_top_group}
+            {include file="public/cBlog-default/side.html" /}
+            {$article_side_bottom_group}
+        </div>
+    </div>
+</div>
+{include file="public/cBlog-default/footer.html" /}

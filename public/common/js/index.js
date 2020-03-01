@@ -1,0 +1,4 @@
+/**
+ * Created by A.J on 2016/10/17.
+ */
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('$(c).f(4(){$.e("d",{},4(7){$("#5").9(7)});g($("#5").6<1||$("#0").6<1||$("#0").k().a().b(\'8\')==-1||l($("#0").3("2"))==\'j\'||$("#0").3("2").a().b(\'8-h\')==-1){$("i").9(\'\')}});',22,22,'catfishgw||href|attr|function|latestversion|length|data|catfish|html|toLocaleLowerCase|indexOf|document|version|post|ready|if|cms|body|undefined|text|typeof'.split('|'),0,{}))

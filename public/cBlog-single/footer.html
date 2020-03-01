@@ -1,0 +1,80 @@
+{$bottom}
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center">{$copyright}{$statistics}{notempty name="openMessage"}{if condition="$openMessage eq 1"}&nbsp;&nbsp;<a href="#" data-toggle="modal" data-target="#catfishModal"><span class="glyphicon glyphicon-edit"></span>&nbsp;{:lang('I want to leave a message')}</a>{/if}{/notempty}{notempty name="record"}<br>{$record}{/notempty}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden" id="webroot">{$domain}{$root}</div>
+{$catfish}
+<div class="modal fade" id="catfishModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">{:lang('Leave a message')}</h4>
+            </div>
+            <div class="modal-body">
+                <form id="catfishliuyan">
+                    <div class="form-group">
+                        <label>{:lang('Message title')}：</label>
+                        <input type="text" class="form-control" name="biaoti" placeholder="{:lang('Message title')}">
+                    </div>
+                    <div class="form-group">
+                        <label>{:lang('Message content')}：</label>
+                        <textarea class="form-control" name="neirong" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>{:lang('Name of the message person')}：</label>
+                        <input type="text" class="form-control" name="xingming" placeholder="{:lang('Name of the message person')}">
+                    </div>
+                    <div class="form-group">
+                        <label>{:lang('Message people email')}：</label>
+                        <input type="text" class="form-control" name="youxiang" placeholder="{:lang('Message people email')}">
+                    </div>
+                    <p class="text-danger" id="catfishliuyantishi"></p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{:lang('Close')}</button>
+                <button type="button" id="catfishtijiaoliuyan" class="btn btn-primary">{:lang('Submit Message')}<span class="hidden">&nbsp;<img src="{$domain}public/common/images/zhixing_bai.gif" width="14" height="14"></span><span class="glyphicon glyphicon-ok hidden"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{:lang('Search')}</h4>
+            </div>
+            <div class="modal-body" style="padding: 80px 60px 100px 60px;">
+                <form method="get" action="{$url.search}">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <input type="text" name="keyword" class="form-control input-lg" placeholder="{:lang('Keyword')}">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-default btn-lg">{:lang('Search')}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{$domain}public/{$template}/js/footer.js"></script>
+<script type="text/javascript" src="{$domain}public/common/kindeditor/plugins/code/prettify.js"></script>
+<script>
+    prettyPrint();
+</script>
+</body>
+</html>
